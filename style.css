@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 75%;
+}
+
+body {
+    min-height: 250vh;
+    padding: 5rem 0;
+    font-size: 1rem;
+    background: url("./faqSBG.jpg") no-repeat center center/cover;
+    font-weight: 300;
+    position: relative;
+}
+
+a {
+    color: #A09480;
+}
+
+.wrapper {
+    min-height: 100vh;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 45%;
+}
+
+.top-heading {
+    padding: 3rem 0;
+}
+
+.top-heading .title {
+    font-size: 2rem;
+    line-height: 4rem;
+    text-transform: uppercase;
+    font-weight: 500;
+} 
+
+.contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.contents .card {
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.contents .card:not(:last-of-type) {
+    margin-bottom: 1.5rem;
+}
+
+.card .faqs-heading {
+    text-align: left;
+    border-bottom: 1px solid #EFF1EE;
+}
+
+.card .faqs-heading.active {
+    border: 2px dashed #9827dc;
+}
+
+.faqs-heading .faqs-title {
+    padding: 2rem;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    font-weight: 500;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.faqs-heading .faqs-title::after {
+    position: absolute;
+    content: "+";
+    right: 2rem;
+    font-size: 1.6rem;
+    transition: all .4s ease;
+}
+
+.faqs-heading .faqs-title.active::after {
+    content: "-";
+    font-size: 3rem;
+    transition: all .3s ease;
+}
+
+.card .faqs-desc {
+    padding: 0;
+    color: #A09480;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    height: 0;
+    overflow: hidden;
+    transition: all .4s ease;
+}
+
+.card .faqs-desc.active {
+    padding: 2rem;
+    height: auto;
+}
